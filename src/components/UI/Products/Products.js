@@ -126,7 +126,7 @@ const Products = ({ limit, showDiscounted, showButton, categoryId, title, showFi
                 <Link to={`/product/${product.id}`} key={product.id} className={styles.itemLink}>
                   <div className={styles.item}>
                     <div className={styles.img}>
-                      <img src={`http://localhost:3333${product.image}`} alt={product.title} />
+                      <img src={`http://localhost:3333/public${product.image}`} alt={product.title} />
                       {product.discont_price && (
                         <div className={styles.sale}>
                           -{Math.round(((product.price - product.discont_price) / product.price) * 100)}%

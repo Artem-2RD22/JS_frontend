@@ -60,14 +60,14 @@ const ProductPage = () => {
 
   if (loading) return <p>Loading...</p>; // Отображение состояния загрузки
   if (error) return <p>{error}</p>; // Отображение ошибки, если она возникла
-  if (!product) return <p>Product not found.</p>; // Отображение сообщения, если продукт не найден
+  if (!product) return <p>Product not found. ProductId = {productId}</p>; // Отображение сообщения, если продукт не найден
 
   const { title, price, discont_price, description, image } = product;
 
   return (
     <div className={styles.productPage}>
       <div className={styles.gallery}>
-        <img src={`http://localhost:3333${image}`} alt={title} className={styles.mainPhoto} /> {/* Отображение изображения продукта */}
+        <img src={`http://localhost:3333/public${image}`} alt={title} className={styles.mainPhoto} /> {/* Отображение изображения продукта */}
       </div>
       <div className={styles.txt}>
         <h1 className={styles.title}>{title}</h1> {/* Отображение названия продукта */}

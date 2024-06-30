@@ -16,6 +16,9 @@ import OrderPage from './pages/OrderPage/OrderPage';
 import NotFoundPage from './pages/404Page/404Page';
 import LoginPage from './pages/LoginPage/LoginPage';
 import RegisterPage from './pages/RegisterPage/RegisterPage';
+import AdminCategoriesPage from './pages/AdminCategoriesPage/AdminCategoriesPage';
+import AdminProductsPage from './pages/AdminProductsPage/AdminProductsPage';
+
 
 const ProtectedRoute = ({ element: Component, ...rest }) => {
   const isAuthenticated = useSelector((state) => !!state.auth.user);
@@ -38,6 +41,8 @@ const App = () => {
           <Route path="/order/:orderId" element={<OrderPage />} />
           <Route path="/login" element={<LoginPage />} />
           <Route path="/register" element={<RegisterPage />} />
+          <Route path="/admin/categories" element={<ProtectedRoute element={AdminCategoriesPage} />} />
+          <Route path="/admin/products" element={<ProtectedRoute element={AdminProductsPage} />} />
           <Route path="*" element={<NotFoundPage />} /> {/* Catch-all route for 404 */}
         </Routes>
       </Router>

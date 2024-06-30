@@ -37,7 +37,7 @@ const Categories = ({ limit, showButton }) => {
             .map((category) => (
               <Link to={`/category/${category.id}`} key={category.id} className={styles.category}>
                 <img
-                  src={`http://localhost:3333${category.image}`}
+                  src={`http://localhost:3333/public${category.image}`}
                   alt={category.title}
                   className={styles.image}
                 />

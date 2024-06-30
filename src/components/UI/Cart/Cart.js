@@ -40,7 +40,7 @@ const Cart = ({ showButton }) => {
         productId: item.id,
         quantity: item.quantity
       }));
-      const response = await axios.post('http://localhost:3333/order/create', {
+      await axios.post('http://localhost:3333/order/create', {
         userId: user.id,
         items: orderItems
       }, {
@@ -87,7 +87,7 @@ const Cart = ({ showButton }) => {
             cartItems.map((item) => (
               <div className={styles.item} key={item.id}>
                 <div className={styles.image}>
-                  <img src={`http://localhost:3333${item.image}`} alt={item.title} />
+                  <img src={`http://localhost:3333/public${item.image}`} alt={item.title} />
                 </div>
                 <div className={styles.content}>
                   <div className={styles.headerItem}>

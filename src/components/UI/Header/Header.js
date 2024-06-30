@@ -28,6 +28,12 @@ const Header = () => {
         <Link to="/sales">All Sales</Link>
         {user ? (
           <>
+            {user.role_id === 1 && (
+              <>
+                <Link to="/admin/categories">AdminCat</Link>
+                <Link to="/admin/products">AdminPro</Link>
+              </>
+            )}
             <Link to="/orders">Orders</Link>
             <button onClick={handleLogout} className={styles.logoutButton}>Logout</button>
           </>
