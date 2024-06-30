@@ -1,0 +1,39 @@
+.orderDetailContainer {
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  .orderDetailContainer h2 {
+    text-align: center;
+  }
+  
+  .orderDetailContainer h3 {
+    margin-top: 20px;
+  }
+  
+  .orderDetailContainer ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .orderDetailContainer li {
+    border-bottom: 1px solid #eee;
+    padding: 10px 0;
+  }
+  
+  .orderDetailContainer li:last-child {
+    border-bottom: none;
+  }
+  
+  .orderDetailContainer p {
+    margin: 5px 0;
+  }
+  
+  .error {
+    color: red;
+    text-align: center;
+  }
+  
